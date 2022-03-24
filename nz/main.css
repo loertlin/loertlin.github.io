@@ -7,6 +7,12 @@ body {
 
 header{
     text-align: center;
+
+}
+
+/*wenn einen Class angesprochen wird*/
+.user{
+    border-radius: 50%;
 }
 
 main {
