@@ -2,7 +2,8 @@
 
 
 body {
-    background-color: #eeeeee
+    background-color: #eeeeee;
+    font-family: Verdana, Arial, Helvetica, sans-serif, monospace; /*Browser verwendet immer das die schrift die verfügbar ist, deshalb haben wir mehrere hingeschrieben*/
 }
 
 header{
