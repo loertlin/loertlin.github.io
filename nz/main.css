@@ -40,4 +40,13 @@ a {
 footer {
     border-top: 1px solid black;
     padding: 1em 2em 3em 2em /*Abstand: oben, rechts, links, unten*/
+    
+}
+
+footer .back {
+    float: left
+}
+
+footer .next {
+    float: right
 }
