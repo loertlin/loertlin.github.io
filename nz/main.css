@@ -12,4 +12,10 @@ main {
 
 article {
     padding: 1em;
+    ;
+}
+
+/*alle p Elemente, die im article sind*/
+article p {
+    text-align: justify
 }
