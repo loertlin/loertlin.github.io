@@ -3,20 +3,21 @@
 
 body {
     background-color: #eeeeee;
-    font-family: Verdana, Arial, Helvetica, sans-serif, monospace; /*Browser verwendet immer das die schrift die verfügbar ist, deshalb haben wir mehrere hingeschrieben*/
+    font-family: Verdana, Arial, Helvetica, sans-serif, monospace;
+    /*Browser verwendet immer das die schrift die verfügbar ist, deshalb haben wir mehrere hingeschrieben*/
 }
 
-header{
+header {
     text-align: center;
 
 }
 
-img.banner{
+img.banner {
     width: 100%;
 }
 
 /*wenn einen Class angesprochen wird*/
-img.user{
+img.user {
     border-radius: 50%;
     margin-top: -50px;
 }
@@ -24,7 +25,8 @@ img.user{
 main {
     background-color: white;
     max-width: 1024px;
-    margin:auto; /*Seite in Mitte gerückt*/
+    margin: auto;
+    /*Seite in Mitte gerückt*/
 }
 
 article {
@@ -48,8 +50,9 @@ a {
 
 footer {
     border-top: 1px solid black;
-    padding: 1em 2em 3em 2em /*Abstand: oben, rechts, links, unten*/
-    
+    padding: 1em 2em 3em 2em
+        /*Abstand: oben, rechts, links, unten*/
+
 }
 
 footer .back {
@@ -61,7 +64,7 @@ footer .next {
 }
 
 .shadow {
-    box-shadow: 
-    0 4px 8px 0 rgba(0, 0, 0, 0.2), 
-    0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
