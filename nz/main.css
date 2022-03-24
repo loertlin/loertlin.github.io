@@ -9,3 +9,7 @@ main {
     max-width: 1024px;
     margin:auto; /*Seite in Mitte gerückt*/
 }
+
+article {
+    padding: 1em;
+}
