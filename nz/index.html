@@ -17,6 +17,10 @@
     <!--Leaflet Bibliothek: style + script-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+     <!--Kartenscript-->
+    <script src="main.js"></script>
+
 </head>
 
 
@@ -75,21 +79,6 @@
 
         </main>
 
-        <script>
-            /*map: variable; L.map: Leaflet involviert und kann Karten machen; "map": wo soll die Karte hin?--> zur id=map; setview: lat und long; 8:Zoomfaktor*/
-            var map = L.map('map').setView([-45.34, 170.82], 8
-        );
-            /*L.tileLayer: wo liegen die tiles? z:zoom, x: lomg, y:lat, s:verschiedene server die angesteuert werden können*/
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                /*unten rechts in Karte*/
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map); /*damit ist die variable map gemeint*/
-
-            /*Wohin Marker setzen?; Was soll im Popup stehen?*/
-            L.marker([-45.34, 170.82]).addTo(map)
-                .bindPopup('<h3>Moeraki Boulders</h3>')
-                .openPopup();
-        </script>
 
 
 
