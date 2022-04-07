@@ -66,13 +66,13 @@ for (let etappe of ETAPPEN) {
 for (let huts of HUTS) {
     let popup = `
     <h3>${huts.name}</h3>
-    <ul>
-        <li>geogr. Länge: ${huts.lng}</li>
-        <li>geogr. Breite: ${huts.lat}</li>
-        <li><a href="${huts.image}">Bild der Hütte</a></li>
-        <li><a href="${huts.link}">Link zur Webseite</a></li>
-        
-    </ul>
+    <h4>${huts.region}</h4>
+    <hr>
+    <p>${huts.info}</p>
+    <img src="${huts.image}" alt="Bild der Hütte">
+    <hr>
+    <a href="${huts.link}" target = Neuseeland>Link zur Hütte</a>
+
     `;
     //console.log(etappe);
     L.circleMarker([huts.lat, huts.lng]).addTo(map).bindPopup(popup);
