@@ -11,6 +11,19 @@ console.log(coords[0]);
 console.log(coords[1]);
 console.log(coords.length);
 
+console.log("text");
+console.log('text');
+console.log('id="map"')
+console.log(`latitude = ${lat}`); /*Variable wird ersetzt*/
+
+let popup = `
+    <h3>Moeraki Boulders</h3>
+    <ul>
+        <li>geogr. Länge: ${lng}</li>
+        <li>geogr. Breite: ${lat}</li>
+`;
+
+
 let map = L.map('map').setView(coords, zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -18,6 +31,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 L.marker(coords).addTo(map)
-    .bindPopup('<h3>Moeraki Boulders</h3>')
+    .bindPopup(popup)
     .openPopup();
 
