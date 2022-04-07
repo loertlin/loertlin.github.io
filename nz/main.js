@@ -26,12 +26,12 @@ let coords = [-45.34, 170.82];
 //console.log(ETAPPEN[0].lng)
 
 let popup = `
-    <h3>${ETAPPEN[0].titel} (Etappe ${ETAPPEN[0].nr})</h3>
+    <h3>${ETAPPEN[2].titel} (Etappe ${ETAPPEN[2].nr})</h3>
     <ul>
-        <li>geogr. Länge: ${ETAPPEN[0].lng}</li>
-        <li>geogr. Breite: ${ETAPPEN[0].lat}</li>
-        <li><a href="${ETAPPEN[0].wikipedia}">Link zur Wikipediaseite</a></li>
-        <li><a href="${ETAPPEN[0].github}">Link zur Etappenseite</a></li>
+        <li>geogr. Länge: ${ETAPPEN[2].lng}</li>
+        <li>geogr. Breite: ${ETAPPEN[2].lat}</li>
+        <li><a href="${ETAPPEN[2].wikipedia}">Link zur Wikipediaseite</a></li>
+        <li><a href="${ETAPPEN[2].github}">Link zur Etappenseite</a></li>
     </ul>
 `;
 
@@ -48,7 +48,16 @@ L.marker(coords).addTo(map)
 
 
 for (let etappe of ETAPPEN) {
+    let popup = `
+    <h3>${etappe.titel} (Etappe ${etappe.nr})</h3>
+    <ul>
+        <li>geogr. Länge: ${etappe.lng}</li>
+        <li>geogr. Breite: ${etappe.lat}</li>
+        <li><a href="${etappe.wikipedia}">Link zur Wikipediaseite</a></li>
+        <li><a href="https://${etappe.github}.github.io/nz">Link zur Etappenseite</a></li>
+    </ul>
+    `;
     //console.log(etappe);
-    L.marker([etappe.lat, etappe.lng]).addTo(map);
+    L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
     
 }
