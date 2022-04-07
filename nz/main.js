@@ -60,8 +60,8 @@ for (let etappe of ETAPPEN) {
     //console.log(etappe);
     L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
 
-    //Etappennavigation erweitern
-    let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen" class="etappenLink">${etappe.nr}</a>`;
+ //Etappennavigation erweitern
+    let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
     document.querySelector("#navigation").innerHTML += link
     
 }
