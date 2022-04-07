@@ -26,12 +26,12 @@ let coords = [-45.34, 170.82];
 //console.log(ETAPPEN[0].lng)
 
 let popup = `
-    <h3>${ETAPPEN[2].titel} (Etappe ${ETAPPEN[2].nr})</h3>
+    <h3>${ETAPPEN[0].titel} (Etappe ${ETAPPEN[2].nr})</h3>
     <ul>
-        <li>geogr. Länge: ${ETAPPEN[2].lng}</li>
-        <li>geogr. Breite: ${ETAPPEN[2].lat}</li>
-        <li><a href="${ETAPPEN[2].wikipedia}">Link zur Wikipediaseite</a></li>
-        <li><a href="${ETAPPEN[2].github}">Link zur Etappenseite</a></li>
+        <li>geogr. Länge: ${ETAPPEN[0].lng}</li>
+        <li>geogr. Breite: ${ETAPPEN[0].lat}</li>
+        <li><a href="${ETAPPEN[0].wikipedia}">Link zur Wikipediaseite</a></li>
+        <li><a href="${ETAPPEN[0].github}">Link zur Etappenseite</a></li>
     </ul>
 `;
 
@@ -59,6 +59,10 @@ for (let etappe of ETAPPEN) {
     `;
     //console.log(etappe);
     L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+
+    //Etappennavigation erweitern
+    let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen">${etappe.nr}</a>`;
+    document.querySelector("#navigation").innerHTML += link
     
 }
 
@@ -71,7 +75,7 @@ for (let huts of HUTS) {
     <p>${huts.info}</p>
     <img src="${huts.image}" alt="Bild der Hütte">
     <hr>
-    <a href="${huts.link}" target = Neuseeland>Link zur Hütte</a>
+    <a href="${huts.link}" target ="Neuseeland">Link zur Hütte</a> 
 
     `;
     //console.log(etappe);
