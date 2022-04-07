@@ -6,24 +6,24 @@ let lng = 170.82
 let zoom= 8
 
 let coords = [-45.34, 170.82];
-console.log(coords);
-console.log(coords[0]);
-console.log(coords[1]);
-console.log(coords.length);
+//console.log(coords);
+//console.log(coords[0]);
+//console.log(coords[1]);
+//console.log(coords.length);
+//
+//console.log("text");
+//console.log('text');
+//console.log('id="map"')
+//console.log(`latitude = ${lat}`); /*Variable wird ersetzt*/
 
-console.log("text");
-console.log('text');
-console.log('id="map"')
-console.log(`latitude = ${lat}`); /*Variable wird ersetzt*/
-
-console.log(ETAPPEN);
-console.log(ETAPPEN[0]);
-console.log(ETAPPEN[0].nr)
-console.log(ETAPPEN[0].github)
-console.log(ETAPPEN[0].titel)
-console.log(ETAPPEN[0].wikipedia)
-console.log(ETAPPEN[0].lat)
-console.log(ETAPPEN[0].lng)
+//console.log(ETAPPEN);
+//console.log(ETAPPEN[0]);
+//console.log(ETAPPEN[0].nr)
+//console.log(ETAPPEN[0].github)
+//console.log(ETAPPEN[0].titel)
+//console.log(ETAPPEN[0].wikipedia)
+//console.log(ETAPPEN[0].lat)
+//console.log(ETAPPEN[0].lng)
 
 let popup = `
     <h3>${ETAPPEN[0].titel} (Etappe ${ETAPPEN[0].nr})</h3>
