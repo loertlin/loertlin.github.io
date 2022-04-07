@@ -16,6 +16,8 @@ console.log('text');
 console.log('id="map"')
 console.log(`latitude = ${lat}`); /*Variable wird ersetzt*/
 
+console.log(ETAPPEN);
+
 let popup = `
     <h3>Moeraki Boulders</h3>
     <ul>
@@ -33,4 +35,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker(coords).addTo(map)
     .bindPopup(popup)
     .openPopup();
+
+
 
