@@ -75,6 +75,6 @@ for (let huts of HUTS) {
     </ul>
     `;
     //console.log(etappe);
-    L.marker([huts.lat, huts.lng]).addTo(map).bindPopup(popup);
+    L.circleMarker([huts.lat, huts.lng]).addTo(map).bindPopup(popup);
     
 }
