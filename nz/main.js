@@ -47,4 +47,8 @@ L.marker(coords).addTo(map)
     .openPopup();
 
 
-
+for (let etappe of ETAPPEN) {
+    //console.log(etappe);
+    L.marker([etappe.lat, etappe.lng]).addTo(map);
+    
+}
