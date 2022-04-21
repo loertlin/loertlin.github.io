@@ -62,7 +62,7 @@ for (let etappe of ETAPPEN) {
 
  //Etappennavigation erweitern
     let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
-    document.querySelector("#navigation").innerHTML += link
+    document.querySelector("#navigation").innerHTML += link;
     
 }
 
