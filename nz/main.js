@@ -26,23 +26,23 @@ let coords = [-45.34, 170.82];
 //console.log(ETAPPEN[0].lng)
 
 let popup = `
-    <h3>${ETAPPEN[0].titel} (Etappe ${ETAPPEN[2].nr})</h3>
+    <h3>${ETAPPEN[2].titel} (Etappe ${ETAPPEN[2].nr})</h3>
     <ul>
-        <li>geogr. Länge: ${ETAPPEN[0].lng}</li>
-        <li>geogr. Breite: ${ETAPPEN[0].lat}</li>
-        <li><a href="${ETAPPEN[0].wikipedia}">Link zur Wikipediaseite</a></li>
-        <li><a href="${ETAPPEN[0].github}">Link zur Etappenseite</a></li>
+        <li>geogr. Länge: ${ETAPPEN[2].lng}</li>
+        <li>geogr. Breite: ${ETAPPEN[2].lat}</li>
+        <li><a href="${ETAPPEN[2].wikipedia}">Link zur Wikipediaseite</a></li>
+        <li><a href="${ETAPPEN[2].github}">Link zur Etappenseite</a></li>
     </ul>
 `;
 
 
-let map = L.map('map').setView(coords, zoom);
+let map = L.map('map').setView([-45.34, 170.82], zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-L.marker(coords).addTo(map)
+L.marker([-45.34, 170.82]).addTo(map)
     .bindPopup(popup)
     .openPopup();
 
