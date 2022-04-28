@@ -3,7 +3,7 @@
 
 let zoom = 8
 
-let coords = [-45.34, 170.82];
+let coords = [ETAPPEN[2].lat, ETAPPEN[2].lng];
 //console.log(coords);
 //console.log(coords[0]);
 //console.log(coords[1]);
