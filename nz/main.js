@@ -44,10 +44,16 @@ for (let etappe of ETAPPEN) {
     </ul>
     `;
     //console.log(etappe);
-    L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+    let navClass = "etappenLink"; 
+    let mrk = L.marker([etappe.lat, etappe.lng]).addTo(map).bindPopup(popup);
+    if(etappe.nr == 3) {
+        mrk.openPopup();
+        navClass = "etappenLink etappeAktuell"
+    }
 
     //Etappennavigation erweitern
-    let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen" class="etappenLink" title="${etappe.titel}">${etappe.nr}</a>`;
+    let link = `<a href="https://${etappe.github}.github.io/nz" target ="Etappen" 
+    class="${navClass}" title="${etappe.titel}">${etappe.nr}</a>`;
     document.querySelector("#navigation").innerHTML += link;
 
 }
