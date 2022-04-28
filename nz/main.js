@@ -27,10 +27,16 @@ let coords = [ETAPPEN[2].lat, ETAPPEN[2].lng];
 
 let map = L.map('map').setView([-45.34, 170.82], zoom);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let startLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+let layerControl = L.control.layers({
+    "OpenStreetMap": startLayer, 
+    "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
+
+}).addTo(map); 
 
 
 for (let etappe of ETAPPEN) {
@@ -81,6 +87,8 @@ for (let huts of HUTS) {
     }).addTo(map).bindPopup(popup);
 
 }
+
+
 
 //Maßstab
 L.control.scale({
