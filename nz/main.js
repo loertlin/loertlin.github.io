@@ -71,6 +71,13 @@ for (let huts of HUTS) {
 
     `;
     //console.log(etappe);
-    L.circleMarker([huts.lat, huts.lng]).addTo(map).bindPopup(popup);
+    let statusColor;
+    if (huts.open == true) {
+        statusColor = "green"
+    } else {statusColor = "red";}
+
+    L.circleMarker([huts.lat, huts.lng], {
+        color: statusColor
+    }).addTo(map).bindPopup(popup);
 
 }
