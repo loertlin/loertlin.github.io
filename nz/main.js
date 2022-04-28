@@ -81,3 +81,11 @@ for (let huts of HUTS) {
     }).addTo(map).bindPopup(popup);
 
 }
+
+//Maßstab
+L.control.scale({
+    imperial: false
+}).addTo(map);
+
+//Fullscreen
+L.control.fullscreen().addTo(map);
