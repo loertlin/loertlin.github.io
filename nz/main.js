@@ -41,6 +41,8 @@ let layerControl = L.control.layers({
 
 }).addTo(map); 
 
+/*damit control gleich schon ausgerollt ist*/
+layerControl.expand();
 
 for (let etappe of ETAPPEN) {
     let popup = `
