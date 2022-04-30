@@ -35,14 +35,19 @@ let startLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 let layerControl = L.control.layers({
     "OpenStreetMap": startLayer, 
     "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
-    "Stamen.Watercolor": L.tileLayer.provider("Stamen.Watercolor"),
-    "Stadia.Outdoors": L.tileLayer.provider("Stadia.Outdoors"),
-    "GeoportailFrance.orthos": L.tileLayer.provider("GeoportailFrance.orthos"),
+    "Orthophoto (GeoportailFrance)": L.tileLayer.provider("GeoportailFrance.orthos"),
+    "Outdoor (Stamen)": L.tileLayer.provider("Stadia.Outdoors"),
+    "Watercolor (Stamen)": L.tileLayer.provider("Stamen.Watercolor"),
 
 }).addTo(map); 
 
 /*damit control gleich schon ausgerollt ist*/
 layerControl.expand();
+
+/*Minimap hinzufügen*/
+let miniMap = new L.Control.MiniMap(
+    L.tileLayer.provider("OpenStreetMap")
+).addTo(map);
 
 for (let etappe of ETAPPEN) {
     let popup = `
