@@ -36,7 +36,7 @@ let layerControl = L.control.layers({
     "OpenStreetMap": startLayer, 
     "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
     "Orthophoto (GeoportailFrance)": L.tileLayer.provider("GeoportailFrance.orthos"),
-    "Outdoor (Stamen)": L.tileLayer.provider("Stamen.Outdoors"),
+    "Outdoor (Stadia)": L.tileLayer.provider("Stadia.Outdoors"),
     "Watercolor (Stamen)": L.tileLayer.provider("Stamen.Watercolor"),
 
 }).addTo(map); 
