@@ -35,6 +35,9 @@ let startLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 let layerControl = L.control.layers({
     "OpenStreetMap": startLayer, 
     "OpenTopoMap": L.tileLayer.provider("OpenTopoMap"),
+    "Stamen.Watercolor": L.tileLayer.provider("Stamen.Watercolor"),
+    "Stadia.Outdoors": L.tileLayer.provider("Stadia.Outdoors"),
+    "GeoportailFrance.orthos": L.tileLayer.provider("GeoportailFrance.orthos"),
 
 }).addTo(map); 
 
