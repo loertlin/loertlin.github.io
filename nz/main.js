@@ -45,7 +45,10 @@ layerControl.expand();
 
 /*Minimap hinzufügen*/
 let miniMap = new L.Control.MiniMap(
-    L.tileLayer.provider("OpenStreetMap")
+    L.tileLayer.provider("OpenStreetMap"), {
+        toggleDisplay: true
+    }
+    
 ).addTo(map);
 
 for (let etappe of ETAPPEN) {
